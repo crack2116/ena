@@ -2,34 +2,1248 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flower</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Gordita Bella Lesly</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Romantic Floating Elements Background */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 105, 180, 0.6);
+            animation: float 10s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-20vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced Romantic Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 5%;
+            background: rgba(255, 182, 193, 0.3);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 5px 30px rgba(214, 51, 108, 0.2);
+            transition: all 0.5s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        header:hover {
+            background: rgba(255, 182, 193, 0.4);
+            box-shadow: 0 8px 35px rgba(214, 51, 108, 0.3);
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #d6336c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #d6336c;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d6336c;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 3px 8px rgba(214, 51, 108, 0.3);
+        }
+
+        /* Main Container */
+        .container {
+            padding: 150px 10% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            color: #d6336c;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            animation: fadeIn 2s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #d6336c;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(214, 51, 108, 0.4);
+            transition: all 0.3s ease;
+            animation: fadeIn 2.5s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(214, 51, 108, 0.6);
+            background: #c2255c;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d6336c;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            border-radius: 3px;
+        }
+
+        /* Portal Section */
+        .portals {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .portal {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portal:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(214, 51, 108, 0.3);
+        }
+
+        .portal i {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: #d6336c;
+            transition: all 0.3s ease;
+        }
+
+        .portal:hover i {
+            transform: scale(1.2);
+            animation: pulse 1s infinite;
+        }
+
+        .portal h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #d6336c;
+        }
+
+        .portal::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right,
+                    rgba(255, 255, 255, 0.3),
+                    rgba(255, 255, 255, 0));
+            transform: rotate(30deg);
+            transition: all 0.5s ease;
+        }
+
+        .portal:hover::before {
+            animation: shine 1.5s;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -50%;
+            }
+
+            100% {
+                left: 150%;
+            }
+        }
+
+
+
+
+        /* Heart Section */
+        #heart {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            margin: 30px 0;
+            padding: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        #heart:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .heart-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .heart-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .heart-img .pulse {
+            font-size: 120px;
+            color: #d6336c;
+            animation: pulse 2s infinite;
+        }
+
+        .heart-text {
+            flex: 2;
+        }
+
+        .heart-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Love Meter Section */
+        .love-meter {
+            width: 100%;
+            max-width: 400px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .meter-title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #d6336c;
+            margin-bottom: 15px;
+        }
+
+        .meter-container {
+            width: 100%;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .meter-fill {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #ff9a9e, #d6336c);
+            border-radius: 15px;
+            transition: width 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meter-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.3) 0%,
+                    rgba(255, 255, 255, 0) 50%,
+                    rgba(255, 255, 255, 0.3) 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .meter-value {
+            text-align: center;
+            font-weight: bold;
+            color: #d6336c;
+            font-size: 1.2rem;
+        }
+
+        .meter-btn {
+            display: block;
+            margin: 15px auto 0;
+            padding: 8px 20px;
+            background: #d6336c;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .meter-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(214, 51, 108, 0.4);
+        }
+
+        /* Memory Lane Section */
+        .memory-lane {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+
+        .memory-card {
+            width: 220px;
+            height: 220px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .photo-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(214, 51, 108, 0.3);
+            border: 8px solid white;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+        }
+
+        .memory-card:hover .photo-frame {
+            transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+            box-shadow: 0 15px 40px rgba(214, 51, 108, 0.5);
+        }
+
+        .memory-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .memory-card:hover .memory-photo {
+            transform: scale(1.1);
+        }
+
+        .memory-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(214, 51, 108, 0.9), transparent);
+            color: white;
+            padding: 20px 10px 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: all 0.5s ease;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .memory-card:hover .memory-overlay {
+            transform: translateY(0);
+        }
+
+        /* Polaroid Effect */
+        .photo-frame::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .memory-card {
+                width: 150px;
+                height: 150px;
+            }
+
+            .photo-frame {
+                border-width: 5px;
+            }
+
+            .memory-overlay {
+                font-size: 1.1rem;
+                padding: 10px 5px 5px;
+            }
+        }
+
+        .swal-confirm-btn {
+            background: #d6336c !important;
+            font-family: 'Dancing Script', cursive !important;
+            font-size: 1.2rem !important;
+        }
+
+        /* Kiss Section */
+        #kiss {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            margin: 30px 0;
+            padding: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        #kiss:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .kiss-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .kiss-text {
+            flex: 2;
+        }
+
+        .kiss-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .kiss-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .kiss-img .floating {
+            font-size: 120px;
+            color: #d6336c;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Love Section */
+        #love {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            margin: 30px 0;
+            padding: 40px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+        }
+
+        #love:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .love-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .love-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .love-img .spin {
+            font-size: 120px;
+            color: #d6336c;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .love-text {
+            flex: 2;
+        }
+
+        .love-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Apology Section */
+        .apology {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            margin-top: 50px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .apology h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d6336c;
+            margin-bottom: 30px;
+        }
+
+        .apology p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Romantic Checkbox */
+        .romantic-checkbox {
+            display: none;
+        }
+
+        .romantic-checkbox+label {
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            display: inline-block;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .romantic-checkbox+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            border: 2px solid #d6336c;
+            border-radius: 5px;
+            background: white;
+        }
+
+        .romantic-checkbox:checked+label:after {
+            content: '❤';
+            position: absolute;
+            left: 5px;
+            top: -5px;
+            font-size: 20px;
+            color: #d6336c;
+            animation: heartBeat 0.5s;
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.3);
+            }
+
+            50% {
+                transform: scale(0.8);
+            }
+
+            75% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Hidden Message */
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            animation: fadeIn 1s ease;
+        }
+
+        /* Forgive Button */
+        .forgive-btn {
+            background: linear-gradient(45deg, #d6336c, #ff9a9e);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(214, 51, 108, 0.4);
+            transition: all 0.3s ease;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .forgive-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(214, 51, 108, 0.6);
+            background: linear-gradient(45deg, #c2255c, #fad0c4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 120px 5% 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .heart-content,
+            .kiss-content,
+            .love-content {
+                flex-direction: column;
+            }
+
+            .heart-img,
+            .kiss-img,
+            .love-img {
+                margin-bottom: 30px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .portal {
+                width: 150px;
+                height: 150px;
+            }
+
+            .portal i {
+                font-size: 40px;
+            }
+
+            .portal h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                padding: 10px 5%;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .portals {
+                gap: 15px;
+            }
+
+            .portal {
+                width: 130px;
+                height: 130px;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <h1>Feliz dia mi gordita bella hermosa<br><small>Lesly de mi corazon</small></h1>
-  <div class="sunflwr">
-    <div class="sunflwr__leaf--left"></div>
-    <div class="sunflwr__leaf--right"></div>
-    <div class="sunflwr__stem"></div>
-    <div class="sunflwr__center"></div>
-    <div class="sunflwr__pedal--1"></div>
-    <div class="sunflwr__pedal--2"></div>
-    <div class="sunflwr__pedal--3"></div>
-    <div class="sunflwr__pedal--4"></div>
-    <div class="sunflwr__pedal--5"></div>
-    <div class="sunflwr__pedal--6"></div>
-    <div class="sunflwr__pedal--7"></div>
-    <div class="sunflwr__pedal--8"></div>
-    <div class="sunflwr__pedal--9"></div>
-    <div class="sunflwr__pedal--10"></div>
-    <div class="sunflwr__pedal--11"></div>
-    <div class="sunflwr__pedal--12"></div>
-  </div>
-  <script src="script.js"></script>
+    <!-- Floating Elements Background -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Enhanced Romantic Header -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-heart"></i>Mi Reina
+        </div>
+        <nav class="nav-links">
+            <a href="#heart"><i class="fas fa-heart"></i>Tu Corazón</a>
+            <a href="#kiss"><i class="fas fa-kiss-wink-heart"></i>Tu Importancia</a>
+            <a href="#love"><i class="fas fa-heartbeat"></i>Mi Amor</a>
+            <a href="#portals"><i class="fas fa-gift"></i>Tu Presencia</a>
+            <a href="#apology"><i class="fas fa-hands-helping"></i>Perdóname</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="hero">
+            <h1>Para Mi Hermosa gordita bella lesly</h1>
+            <p>Por favor perdóname, mi corazón está vacío sin ti</p>
+            <a href="#heart" class="btn">Lee Mi Corazón</a>
+        </section>
+
+        <!-- Portal Section -->
+        <section id="portals">
+            <h2 class="section-title">Sorpresas Especiales</h2>
+            <div class="portals">
+                <div class="portal" onclick="window.open('flores.html', '_blank')">
+                    <i class="fas fa-spa"></i>
+                    <h3>Flores</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Heart Section -->
+        <section id="heart">
+            <h2 class="section-title">Corazón</h2>
+            <div class="heart-content">
+                <div class="heart-img">
+                    <i class="fas fa-heart pulse"></i>
+                </div>
+                <div class="heart-text">
+                    <p>
+                        Mi corazón late solo por ti,<br>
+                        En todo lo que digo y hago.<br>
+                        Incluso cuando peleamos o lloramos,<br>
+                        Mi amor por ti nunca morirá.<br><br>
+
+                        Puede que no siempre haga las cosas bien,<br>
+                        Pero eres mi día, mi estrella, mi noche.<br>
+                        Tu sonrisa puede ahuyentar mi dolor,<br>
+                        Tu risa hace que el día sea más brillante.<br><br>
+
+                        Eres mi hogar, mi calma, mi guía,<br>
+                        La que siempre está a mi lado.<br>
+                        Te amaré más con cada latido,<br>
+                        Vives para siempre en mi corazón.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Meter Section -->
+        <div class="love-meter">
+            <div class="meter-title">Mi Amor Por Ti</div>
+            <div class="meter-container">
+                <div class="meter-fill" id="loveMeter" style="width: 100%;"></div>
+            </div>
+            <div class="meter-value" id="loveValue">100%</div>
+            <button class="meter-btn" id="increaseLove">Aumentar Amor ❤️</button>
+        </div>
+
+
+        <!-- Kiss Section -->
+        <section id="kiss">
+            <h2 class="section-title">Tu Importancia</h2>
+            <div class="kiss-content">
+                <div class="kiss-text">
+                    <p>
+                        Puede que no lo veas todos los días,<br>
+                        Pero en mi corazón, siempre estás.<br>
+                        Tu voz, tu sonrisa, tu forma de ser,<br>
+                        Significan más para mí de lo que las palabras pueden decir.<br><br>
+
+                        No eres solo especial — eres mi luz,<br>
+                        La razón por la que los sueños se sienten cálidos y brillantes.<br>
+                        Sin tu amor, el mundo se siente frío,<br>
+                        Contigo, soy rico, sin necesidad de oro.<br><br>
+
+                        Importas más de lo que imaginas,<br>
+                        Como las flores necesitan el sol para crecer.<br>
+                        No eres solo una parte — eres mi todo,<br>
+                        La pieza que faltaba para completarme.
+                    </p>
+
+                </div>
+                <div class="kiss-img">
+                    <i class="fas fa-kiss-wink-heart floating"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Section -->
+        <section id="love">
+            <h2 class="section-title">Amor</h2>
+            <div class="love-content">
+                <div class="love-img">
+                    <i class="fas fa-heartbeat spin"></i>
+                </div>
+                <div class="love-text">
+                    <p>
+                        <strong>Eres Mi Mundo</strong><br><br>
+
+                        Es difícil expresarlo con palabras, ya ves,<br>
+                        Lo mucho que realmente significas para mí.<br>
+                        Eres la parte más hermosa de mis días,<br>
+                        En cada momento, de incontables maneras.<br><br>
+
+                        Eres la razón de cada una de mis sonrisas,<br>
+                        La respuesta a las oraciones que he hecho todo este tiempo.<br>
+                        Iluminas mis mañanas, calmas todos mis miedos,<br>
+                        Tu presencia trae alegría, tu ausencia — lágrimas.<br><br>
+
+                        No es solo tu risa lo que adoro,<br>
+                        Sino tus pensamientos, tus palabras y mucho más.<br>
+                        En cada pequeña cosa que dices y haces,<br>
+                        Me encuentro enamorándome más profundamente de ti.<br><br>
+
+                        Eres mi mundo, mi corazón, mi canción,<br>
+                        Contigo a mi lado, me siento fuerte.<br>
+                        Mi amor por ti nunca se desvanecerá,<br>
+                        Solo crece con cada nuevo día.<br><br>
+
+                        Así que conoce esta verdad, cerca y lejos —<br>
+                        Eres mi siempre, mi estrella guía.
+                    </p>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Apology Section -->
+        <section class="apology" id="apology">
+            <h2>¿Me Perdonarás?</h2>
+            <p>
+                Quiero pedirte una disculpa sincera desde el fondo de mi corazón por todo lo que hice y dije 💔. Estar
+                lejos de ti y causarte dolor fue el error más grande de mi vida. Entiendo sinceramente que te lastimé, y
+                siento ese dolor profundamente en mi corazón 😔. Eres una parte de mi vida que significa más para mí que
+                cualquier otra cosa. Eres la paz de mi alma, la razón de cada sonrisa, y sin ti, mi vida se siente vacía
+                y sin sentido 💫.<br><br>
+
+                Sé que lo que pasó fue doloroso, y asumo toda la responsabilidad por mis acciones. Nada en este mundo
+                puede cambiar el amor que te tengo. Eres mi mundo, mi todo, y nadie más podría ocupar tu lugar. Te llevo
+                en mi corazón y en mis oraciones siempre ❤️.<br><br>
+
+                Me he dado cuenta de mi error, y te prometo con todo mi corazón que nunca dejaré que algo así vuelva a
+                suceder. Significas el mundo para mí, y todo lo que hago es por ti. Tu amor es la parte más hermosa de
+                mi vida, y te amo con toda mi alma y mi corazón 💖. Eres la persona más importante de mi vida, y nunca
+                lo olvidaré.<br><br>
+
+                Realmente espero que puedas perdonarme, y que podamos reconstruir el amor, la confianza y el hermoso
+                vínculo que compartimos 💞.
+            </p>
+
+
+
+
+            <input type="checkbox" id="forgive-check" class="romantic-checkbox">
+            <label for="forgive-check">Elijo perdonarte</label>
+
+            <div id="forgive-message" class="hidden-message">
+                <p>Gracias, mi amor ❤️ Prometo compensarte cada día. Eres mi mundo y pasaré una eternidad mostrándote
+                    cuánto significas para mí.</p>
+                <button class="forgive-btn" id="final-btn">Haz clic para una Sorpresa Especial</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Hecho con <i class="fas fa-heart" style="color: #d6336c;"></i> para la esposa más maravillosa del mundo</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            const elements = ['❤', '💖', '💗', '💓', '💞', '💕', '🌸', '🌹', '💌'];
+            const elementCount = 40;
+
+            for (let i = 0; i < elementCount; i++) {
+                const element = document.createElement('div');
+                element.classList.add('floating-element');
+                element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.animationDuration = 5 + Math.random() * 15 + 's';
+                element.style.animationDelay = Math.random() * 5 + 's';
+                element.style.fontSize = 15 + Math.random() * 25 + 'px';
+                element.style.color = `hsla(${Math.random() * 60 + 330}, 100%, 70%, ${0.3 + Math.random() * 0.7})`;
+                container.appendChild(element);
+            }
+        }
+
+
+        // Love Meter functionality
+        let lovePercentage = 100;
+        const loveMeter = document.getElementById('loveMeter');
+        const loveValue = document.getElementById('loveValue');
+        const increaseLoveBtn = document.getElementById('increaseLove');
+
+        increaseLoveBtn.addEventListener('click', function () {
+            if (lovePercentage < 1000) {
+                lovePercentage += 100;
+                updateLoveMeter();
+
+                // Create hearts animation
+                for (let i = 0; i < 20; i++) {
+                    createHeartAtButton(this);
+                }
+            } else {
+                this.textContent = "¡No puedo amarte más! ❤️";
+                this.style.animation = 'heartBeat 0.5s infinite';
+            }
+        });
+
+        function updateLoveMeter() {
+            const percentage = Math.min(100, lovePercentage / 10);
+            loveMeter.style.width = percentage + '%';
+            loveValue.textContent = lovePercentage + '%';
+
+            // Change color based on percentage
+            const hue = 330 + (lovePercentage / 10);
+            loveMeter.style.background = `linear-gradient(90deg, hsl(${hue}, 100%, 70%), hsl(${hue}, 100%, 50%))`;
+        }
+
+        function createHeartAtButton(button) {
+            const rect = button.getBoundingClientRect();
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤';
+            heart.style.position = 'fixed';
+            heart.style.left = (rect.left + rect.width / 2 - 10) + 'px';
+            heart.style.top = (rect.top - 20) + 'px';
+            heart.style.fontSize = '20px';
+            heart.style.color = `hsl(${Math.random() * 60 + 330}, 100%, 70%)`;
+            heart.style.animation = 'floatUp 2s ease-out forwards';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        }
+
+
+
+
+
+        // Checkbox functionality
+        document.getElementById('forgive-check').addEventListener('change', function () {
+            const forgiveMessage = document.getElementById('forgive-message');
+            if (this.checked) {
+                forgiveMessage.style.display = 'block';
+                createHeartExplosion(50);
+
+                // Scroll to the message
+                setTimeout(() => {
+                    forgiveMessage.scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            } else {
+                forgiveMessage.style.display = 'none';
+            }
+        });
+
+        // Final surprise button
+        document.getElementById('final-btn').addEventListener('click', function () {
+            createHeartExplosion(100);
+            this.textContent = '¡Te amo más de lo que las palabras pueden expresar!';
+            this.style.animation = 'heartBeat 1s infinite';
+
+            // Create a big heart in the sky
+            const bigHeart = document.createElement('div');
+            bigHeart.innerHTML = '❤';
+            bigHeart.style.position = 'fixed';
+            bigHeart.style.left = '50%';
+            bigHeart.style.top = '50%';
+            bigHeart.style.transform = 'translate(-50%, -50%)';
+            bigHeart.style.fontSize = '200px';
+            bigHeart.style.color = '#d6336c';
+            bigHeart.style.zIndex = '1000';
+            bigHeart.style.animation = 'pulse 1s infinite';
+            document.body.appendChild(bigHeart);
+
+            // Remove after 3 seconds
+            setTimeout(() => {
+                bigHeart.remove();
+            }, 3000);
+        });
+
+        function createHeartExplosion(count) {
+            for (let i = 0; i < count; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = ['❤', '💖', '💗', '💓', '💞', '💕'][Math.floor(Math.random() * 6)];
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.fontSize = 30 + Math.random() * 40 + 'px';
+                heart.style.color = `hsl(${Math.random() * 60 + 330}, 100%, 70%)`;
+                heart.style.animation = `floatUp ${2 + Math.random() * 3}s ease-out forwards`;
+                heart.style.zIndex = '1000';
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }
+        }
+
+        // Add keyframe animation for floating up
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100px) scale(1.5);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize the page
+        window.addEventListener('load', function () {
+            createFloatingElements();
+            updateLoveMeter();
+
+            // Animate sections as they come into view
+            const sections = document.querySelectorAll('section, .love-meter');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 1s ease';
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Music player controls initialization is handled inside DOMContentLoaded above
+        ;
+
+    </script>
 </body>
 
 </html>
